@@ -7,6 +7,10 @@ body {
   font-weight: 500;
 }
 
+:root {
+  --blue: #00acdc;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -58,23 +62,27 @@ body {
   position: relative;
 }
 
-a.is-active {
+.nav__link.is-active {
   display: flex;
-  color: #00acdc;
+  color: var(--blue);
   position: relative;
 }
 
-[data-qa='hover']:hover {
-  color: #00acdc;
+.nav__link:hover {
+  color: var(--blue);
 }
 
-a.is-active::after {
+[data-qa='hover']:hover {
+  color: var(--blue);
+}
+
+.nav__link.is-active::after {
   display: flex;
   content: '';
   position: absolute;
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--blue);
   bottom: 0;
   border-radius: 8px;
 }
